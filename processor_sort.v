@@ -130,7 +130,6 @@ module tb;
 
     initial begin
         // The sorting of 20 numbers takes thousands of cycles
-        // Adjust timeout if necessary
         #500000; 
         if (!dut.HALTED) begin
             $display("Simulation Timed Out!");
@@ -150,9 +149,10 @@ module tb;
                 dut.Mem[104 + (i*5)]);
         end
 
-        $display("\n================================================");
+        $display("========================================");
         $finish;
     end
 
 
 endmodule
+
