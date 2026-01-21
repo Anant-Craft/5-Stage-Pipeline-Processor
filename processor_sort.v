@@ -141,11 +141,7 @@ module tb;
     initial begin
         wait(dut.HALTED == 1);
         #100; // Final buffer
-
-        $display("\n================================================");
         $display("       BUBBLE SORT COMPLETED SUCCESSFULLY       ");
-        $display("================================================\n");
-
         for (integer i = 0; i < 4; i = i + 1) begin
             $display("Mem[%0d-%0d]: %3d %3d %3d %3d %3d", 
                 100 + (i*5), 104 + (i*5),
@@ -157,5 +153,6 @@ module tb;
         $display("\n================================================");
         $finish;
     end
+
 
 endmodule
